@@ -1,3 +1,6 @@
+// Random Numbers generators. Generates int, uint, float64 & more.
+// func main() hash a number with crypto/sha256 package using fmt.Sprintf to convert numbers into strings.
+
 package main
 
 import (
