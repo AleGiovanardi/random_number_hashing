@@ -30,9 +30,8 @@ func main() {
 		fmt.Printf("This is the random float64 number: %v\n", r1)
 		// Convert r1 to string with fmt.Sprintln to pass it to sha256.New() function and hash it
 		sr1 := fmt.Sprintln(r1)
-		fmt.Printf("This is a converted float to string: %v\n", sr1)
-		// Initialise variable h to sha256.New function and hash previously
-		// converted float64 to string into a SHA256 hash
+		fmt.Printf("This is a converted float to string: %v", sr1)
+
 		if fmt.Sprintln(r1) != sr1 {
 			fmt.Println("Ooops@! Something's wrong here!")
 		} else {
@@ -41,7 +40,7 @@ func main() {
 		}
 		h := sha256.New()
 		h.Write([]byte(fmt.Sprint(r1)))
-		fmt.Printf("This is the SHA256 hash of the converted float64 to string: %x\n\n", h.Sum(nil))
+		fmt.Printf("\nThis is the SHA256 hash of the converted float64 to string: %x\nHashing success!\n\n", h.Sum(nil))
 
 	}
 }
